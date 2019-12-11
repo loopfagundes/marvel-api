@@ -1,13 +1,14 @@
 package testcases;
 
 import io.restassured.response.Response;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.sql.Timestamp;
 import static io.restassured.RestAssured.given;
 import static utils.HashUtil.getHash;
 
 public class GETCharactersTestCase {
-
+    @Parameters
     @Test
     public void getCharactersWithSuccess() {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
